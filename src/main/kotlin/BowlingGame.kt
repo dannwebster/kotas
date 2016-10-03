@@ -13,15 +13,6 @@ class BowlingGame {
         return rolls.getOrElse(index, constant(0))
     }
 
-    class Frame(val roll1: Int, val roll2: Int, val bonus1: Int, val bonus2: Int) {
-
-
-    }
-
-    fun strike(i: Int) = listOf(getRoll(i), getRoll(i+1), getRoll(i+2))
-    fun spare(i: Int) = listOf(getRoll(i), getRoll(i+1), getRoll(i+2))
-    fun frame(i: Int) = listOf(getRoll(i), getRoll(i+1), 0)
-
     fun score(): Int {
         var frame = 0
         var isFirst = true
